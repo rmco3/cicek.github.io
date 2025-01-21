@@ -12,12 +12,19 @@
             line-height: 1.6;
             margin: 0;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
         
         header {
             text-align: center;
             padding: 20px 0;
             border-bottom: 1px solid #333;
+            width: 100%;
+            max-width: 800px;
         }
         
         h1 {
@@ -27,8 +34,9 @@
         
         section {
             max-width: 800px;
-            margin: 0 auto;
+            width: 100%;
             padding: 20px;
+            text-align: center;
         }
         
         footer {
@@ -37,19 +45,38 @@
             margin-top: 30px;
             border-top: 1px solid #333;
             color: #888;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Yeni CicekClient</h1>
+        <h1>Yeni Güncelleme: v2.2 Yayınlandı</h1>
     </header>
     <section>
-        <p>Yeni CicekClient yaxında gelir. CicekClient, Cicek Applications'ların yönetilmesini asanlaştırır bütün programlar içerisinde olacağ. Yaxında CicekPlayer v2.2 ile birlikde gelecek.</p>
-        <p></p>
+        <p>v2.2</p>
+        <p> (Tarix: 21.01.2025)</p>
+        <ul>
+            <li>Yeni "Xeberler" sekmesi</li>
+            <li>Arayüz (UI) değişiklikleri</li>
+            <li>Xetalar, buglar düzeltildi</li>
+            <li></li>
+            <li>Eger sürümünüz onsuz v2.2'dirse güncellemeyin</li>
+        </ul>
     </section>
     <footer>        
-        <p>&copy; 2024-2025 Cicek Sulutepe INC. All rights reserved</p>
+        <p>&copy; 2024-2025 Cicek Sulutepe INC. All rights reserved</p> 
     </footer>
 </body>
 </html>
