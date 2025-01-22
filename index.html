@@ -3,81 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cicek</title>
+    <meta name="description" content="CicekPlayer tetbiqinin resmi yenileme sehifesi">
+    <title>Çiçek - Güncellemeler</title>
     <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        :root {
+            --bg-primary: #121212;
+            --text-primary: #ffffff;
+            --accent: #4CAF50;
+            --border: rgba(255, 255, 255, 0.1);
+            --card-bg: #1E1E1E;
+        }
+
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
         }
-        
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
         header {
-            text-align: center;
-            padding: 20px 0;
-            border-bottom: 1px solid #333;
-            width: 100%;
-            max-width: 800px;
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border);
+            background: linear-gradient(45deg, var(--card-bg), var(--bg-primary));
+            margin-bottom: 2rem;
         }
-        
+
         h1 {
-            color: #e0e0e0;
-            margin-bottom: 30px;
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, #4CAF50, #8BC34A);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
         }
-        
-        section {
-            max-width: 800px;
-            width: 100%;
-            padding: 20px;
-            text-align: center;
+
+        .update-version {
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: 500;
         }
-        
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 30px;
-            border-top: 1px solid #333;
+
+        .update-date {
             color: #888;
-            width: 100%;
-            max-width: 800px;
+            margin-bottom: 2rem;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+        .changelog {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
         }
 
-        ul li {
-            margin: 10px 0;
+        .changelog-list {
+            display: grid;
+            gap: 1rem;
+            text-align: left;
+        }
+
+        .changelog-item {
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: transform 0.2s ease;
+        }
+
+        .changelog-item:hover {
+            transform: translateX(5px);
+        }
+
+        .changelog-item::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border);
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .changelog {
+                padding: 1.5rem;
+            }
+
+            .changelog-item {
+                padding: 0.8rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease forwards;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Yeni Güncelleme: v1.9.2 Yayınlandı</h1>
+    <header class="animate-fade-in">
+        <div class="container">
+            <h1>v1.9.2 Güncellemesi</h1>
+            <p class="update-version">Versiya 1.9.2</p>
+            <p class="update-date">22.01.2025</p>
+        </div>
     </header>
-    <section>
-        <p>v1.9.2</p>
-        <p> (Tarix: 22.01.2025)</p>
-        <ul>
-            <li>Yeni "Xeberler" penceresi</li>
-            <li>Edited/Fixed update notes</li>
-            <li>Arayüz (UI) değişiklikleri</li>
-            <li>CicekPlayer ve CicekPlayer Mini limitleri güncellendi</li>
-            <li>Xetalar, buglar düzeltildi</li>
-            <li>Eger sürümünüz onsuz v1.9.2'dirse güncellemeyin</li>
-        </ul>
-    </section>
-    <footer>        
-        <p>&copy; 2024-2025 Cicek Sulutepe INC. All rights reserved</p> 
+
+    <main class="container">
+        <div class="changelog animate-fade-in">
+            <ul class="changelog-list">
+                <li class="changelog-item">Yeni "Xeberler" penceresi</li>
+                <li class="changelog-item">Güncelleme notları tezden düzenlendi</li>
+                <li class="changelog-item">Arayüz (UI) değişiklikleri</li>
+                <li class="changelog-item">CicekPlayer ve CicekPlayer Mini limitleri güncellendi</li>
+                <li class="changelog-item">Performans tekmilleşdirmeleri ve bug düzelişleri</li>
+                <li class="changelog-item">Tehlükesizlik ve sabitliyin tekmilleşdirilmesi</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="animate-fade-in">
+        <div class="container">
+            <p>© 2024-2025 Cicek Sulutepe INC. All rights reserved</p>
+        </div>
     </footer>
 </body>
 </html>
