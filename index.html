@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="az">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CicekPlayer tetbiqinin resmi yenileme sehifesi">
-    <title>Çiçek - Güncellemeler</title>
+    <meta name="description" content="CicekPlayer tətbiqinin rəsmi yeniləmə səhifəsi">
+    <title>Cicek - Rəsmi saytı</title>
+    <link rel="icon" href="CicekPlayer.ico" type="image/x-icon">
     <style>
         :root {
             --bg-primary: #121212;
@@ -12,6 +13,7 @@
             --accent: #4CAF50;
             --border: rgba(255, 255, 255, 0.1);
             --card-bg: #1E1E1E;
+            --button-hover: #388E3C;
         }
 
         * {
@@ -42,9 +44,22 @@
             border-bottom: 1px solid var(--border);
             background: linear-gradient(45deg, var(--card-bg), var(--bg-primary));
             margin-bottom: 2rem;
+            text-align: center;
         }
 
-        h1 {
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .header-logo {
+            width: 64px;
+            height: 64px;
+        }
+
+        .header-title {
             font-size: 2.5rem;
             background: linear-gradient(45deg, #4CAF50, #8BC34A);
             -webkit-background-clip: text;
@@ -52,6 +67,33 @@
             color: transparent;
             margin-bottom: 1rem;
             letter-spacing: -0.5px;
+        }
+
+        .header-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            max-width: 600px;
+        }
+
+        .download-button {
+            background-color: var(--accent);
+            color: var(--text-primary);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .download-button:hover {
+            background-color: var(--button-hover);
+        }
+
+        .update-section {
+            margin-top: 3rem;
         }
 
         .update-version {
@@ -111,8 +153,12 @@
                 padding: 0 15px;
             }
 
-            h1 {
+            .header-title {
                 font-size: 2rem;
+            }
+
+            .header-description {
+                font-size: 1rem;
             }
 
             .changelog {
@@ -138,28 +184,36 @@
 <body>
     <header class="animate-fade-in">
         <div class="container">
-            <h1>v1.9.2 Güncellemesi</h1>
-            <p class="update-version">Versiya 1.9.2</p>
-            <p class="update-date">22.01.2025</p>
+            <div class="header-content">
+                <img src="CicekPlayer.ico" alt="CicekPlayer Logo" class="header-logo">
+                <h1 class="header-title">CicekPlayer</h1>
+                <p class="header-description">
+                    CicekPlayer, musiqilərinizi yeni bir tərzdə dinləmək üçün mükəmməl bir tətbiqdir. Sadə və istifadəçi dostu interfeysi ilə sevdiyiniz musiqiləri asanlıqla tapa, diğər Music Player'lərdə olmayan özəllikləri işlədə bilərsiniz.
+                </p>
+                <a href="https://drive.usercontent.google.com/download?id=19ASLQlGyepf6ZzhQxX63Q1sEaZwh5gQ2&export=download&authuser=0" class="download-button" target="_blank">İndi Yüklə</a>
+            </div>
         </div>
     </header>
 
     <main class="container">
-        <div class="changelog animate-fade-in">
-            <ul class="changelog-list">
-                <li class="changelog-item">Yeni "Xeberler" penceresi</li>
-                <li class="changelog-item">Güncelleme notları tezden düzenlendi</li>
-                <li class="changelog-item">Arayüz (UI) değişiklikleri</li>
-                <li class="changelog-item">CicekPlayer ve CicekPlayer Mini limitleri güncellendi</li>
-                <li class="changelog-item">Performans tekmilleşdirmeleri ve bug düzelişleri</li>
-                <li class="changelog-item">Tehlükesizlik ve sabitliyin tekmilleşdirilmesi</li>
-            </ul>
+        <div class="update-section animate-fade-in">
+            <h2 class="update-version">v1.9.3 Güncəlləməsi</h2>
+            <p class="update-date">23.01.2025</p>
+            <div class="changelog">
+                <ul class="changelog-list">
+                    <li class="changelog-item">Yeni "Qarışıq mahnı oynatma" özəlliyi</li>
+                    <li class="changelog-item">Arayüz (UI) dəğişiklikləri </li>
+                    <li class="changelog-item">License güncəlləndi</li>
+                    <li class="changelog-item">Performans təkmilləşdirmələri və bug düzəlişləri</li>
+                    <li class="changelog-item">Təhlükəsizlik və sabitliyin təkmilləşdirilməsi</li>
+                </ul>
+            </div>
         </div>
     </main>
 
     <footer class="animate-fade-in">
         <div class="container">
-            <p>© 2024-2025 Cicek Sulutepe INC. All rights reserved</p>
+            <p>© 2024-2025 Cicek Sulutepe INC. All rights reserved.</p>
         </div>
     </footer>
 </body>
