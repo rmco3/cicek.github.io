@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CicekPlayer tətbiqinin rəsmi yeniləmə səhifəsi">
-    <title>Cicek - Güncellemeler</title>
+    <title>Cicek - Xəbərlər</title>
     <link rel="icon" href="CicekPlayer.ico" type="image/x-icon">
     <style>
         :root {
             --bg-primary: #121212;
             --text-primary: #ffffff;
             --accent: #4CAF50;
+            --accent-light: #8BC34A;
             --border: rgba(255, 255, 255, 0.1);
             --card-bg: #1E1E1E;
             --button-hover: #388E3C;
+            --button-hover-light: #689F38;
+            --text-secondary: #aaaaaa;
+            --transition-speed: 0.3s;
         }
 
         * {
@@ -28,8 +32,9 @@
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             line-height: 1.6;
             min-height: 100vh;
-            display: flex;
+            display: flex; /* Enable Flexbox on body */
             flex-direction: column;
+            overflow-x: hidden;
         }
 
         .container {
@@ -42,110 +47,177 @@
         header {
             padding: 3rem 0;
             border-bottom: 1px solid var(--border);
-            background: linear-gradient(45deg, var(--card-bg), var(--bg-primary));
+            background: linear-gradient(135deg, var(--card-bg), var(--bg-primary));
             margin-bottom: 2rem;
             text-align: center;
+            animation: headerFadeIn var(--transition-speed) ease forwards;
         }
 
         .header-content {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .header-logo {
-            width: 64px;
-            height: 64px;
+            width: 72px;
+            height: 72px;
+            animation: logoSpin 5s linear infinite;
         }
 
         .header-title {
-            font-size: 2.5rem;
-            background: linear-gradient(45deg, #4CAF50, #8BC34A);
+            font-size: 2.8rem;
+            background: linear-gradient(45deg, var(--accent), var(--accent-light));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             margin-bottom: 1rem;
             letter-spacing: -0.5px;
+            animation: titleGlow 3s ease-in-out infinite alternate;
         }
 
         .header-description {
-            font-size: 1.1rem;
-            line-height: 1.7;
+            font-size: 1.2rem;
+            line-height: 1.8;
             max-width: 600px;
+            color: var(--text-secondary);
         }
 
         .download-button {
             background-color: var(--accent);
             color: var(--text-primary);
-            padding: 1rem 2rem;
+            padding: 1rem 2.5rem;
             border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
+            border-radius: 30px;
+            font-size: 1.2rem;
             font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
             text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         }
 
         .download-button:hover {
             background-color: var(--button-hover);
+            transform: translateY(-2px);
         }
 
-        .update-section {
-            margin-top: 3rem;
+        main {
+            flex: 1; /* Allow main to grow and take available space */
+            display: flex; /* Center content vertically in main */
+            flex-direction: column;
+            justify-content: center; /* Vertically center main content */
+            align-items: center; /* Horizontally center main content (optional, already centered by container) */
         }
 
-        .update-version {
-            color: var(--accent);
-            font-size: 1.2rem;
-            font-weight: 500;
-        }
-
-        .update-date {
-            color: #888;
-            margin-bottom: 2rem;
-        }
-
-        .changelog {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 2rem 0;
-        }
-
-        .changelog-list {
-            display: grid;
-            gap: 1rem;
-            text-align: left;
-        }
-
-        .changelog-item {
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
+        .news-section {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 1rem;
-            transition: transform 0.2s ease;
+            animation: newsSectionAnimation 1s ease-out forwards;
+            margin-bottom: 3rem; /* Added margin-bottom here */
         }
 
-        .changelog-item:hover {
-            transform: translateX(5px);
-        }
-
-        .changelog-item::before {
-            content: '✓';
+        .news-title {
             color: var(--accent);
-            font-weight: bold;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .news-content {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .news-item {
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            animation: itemAnimation 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .news-item:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .news-item:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .news-item:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .news-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .news-item-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .news-item-date {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+        }
+
+        .news-item-description {
+            font-size: 1rem;
+            color: var(--text-primary);
+            line-height: 1.7;
         }
 
         footer {
-            margin-top: auto;
             padding: 2rem 0;
             border-top: 1px solid var(--border);
-            color: #888;
+            color: var(--text-secondary);
+            text-align: center;
+            animation: footerFadeIn var(--transition-speed) ease forwards;
+            animation-delay: 0.4s;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--accent);
+            color: var(--text-primary);
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            font-size: 24px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity var(--transition-speed) ease, visibility var(--transition-speed) ease, transform var(--transition-speed) ease;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .back-to-top:hover {
+            background-color: var(--button-hover);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
         }
 
         @media (max-width: 768px) {
@@ -154,30 +226,83 @@
             }
 
             .header-title {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .header-description {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
 
-            .changelog {
+            .news-content {
                 padding: 1.5rem;
             }
+        }
 
-            .changelog-item {
-                padding: 0.8rem;
-                font-size: 0.95rem;
+        /* Animations */
+        @keyframes headerFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes logoSpin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
-        .animate-fade-in {
-            animation: fadeIn 0.6s ease forwards;
+        @keyframes titleGlow {
+            from {
+                text-shadow: 0 0 5px var(--accent);
+            }
+
+            to {
+                text-shadow: 0 0 15px var(--accent-light);
+            }
+        }
+
+        @keyframes newsSectionAnimation {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes itemAnimation {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes footerFadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -196,31 +321,48 @@
     </header>
 
     <main class="container">
-        <div class="update-section animate-fade-in">
-            <h2 class="update-version">v1.9.3 Güncəlləməsi</h2>
-            <p class="update-date">23.01.2025</p>
-            <div class="changelog">
-                <ul class="changelog-list">
-                    <li class="changelog-item">Yeni "Qarışıq mahnı oynatma" özəlliyi</li>
-                    <li class="changelog-item">Arayüz (UI) dəğişiklikləri </li>
-                    <li class="changelog-item">License güncəlləndi</li>
-                    <li class="changelog-item">Performans təkmilləşdirmələri və bug düzəlişləri</li>
-                    <li class="changelog-item">Təhlükəsizlik və sabitliyin təkmilləşdirilməsi</li>
-                </ul>
+        <div class="news-section">
+            <h2 class="news-title">Xəbərlər</h2>
+            <div class="news-content">
+                <div class="news-item">
+                    <h3 class="news-item-title">Yeni Versiya: v1.9.3!</h3>
+                    <p class="news-item-date">24.01.2025</p>
+                    <p class="news-item-description">
+                        CicekPlayer-in ən yeni versiyası artıq istifadənizdədir! Yeni funksiyalar, təkmilləşdirmələr və interfeys dəyişiklikləri ilə musiqi təcrübənizi daha da zövqlü edin.
+                    </p>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer class="animate-fade-in">
+    <footer>
         <div class="container">
-            <p>© 2024-2025 Cicek Sulutepe INC. All rights reserved.</p>
+            <p>© 2025 Cicek Sulutepe INC</p>
         </div>
     </footer>
 
+    <button class="back-to-top" title="Go to top">↑</button>
+
     <script>
         document.getElementById("downloadLink").addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent default behavior of the link
-            window.open("https://e.pcloud.link/publink/show?code=XZEhmKZcb72FwILtLJr0GxWWluAwVOWLEB7", "_blank"); // Open in a new tab using JavaScript
+            event.preventDefault();
+            window.open("https://e.pcloud.link/publink/show?code=XZEhmKZcb72FwILtLJr0GxWWluAwVOWLEB7", "_blank");
+        });
+
+        window.addEventListener('scroll', function() {
+            var backToTopButton = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 200) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        document.querySelector('.back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     </script>
 </body>
