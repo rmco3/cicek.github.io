@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CicekPlayer tətbiqinin rəsmi yeniləmə səhifəsi">
-    <title>Cicek - Rəsmi saytı</title>
+    <title>Cicek - Güncellemeler</title>
     <link rel="icon" href="CicekPlayer.ico" type="image/x-icon">
     <style>
         :root {
@@ -190,7 +190,7 @@
                 <p class="header-description">
                     CicekPlayer, musiqilərinizi yeni bir tərzdə dinləmək üçün mükəmməl bir tətbiqdir. Sadə və istifadəçi dostu interfeysi ilə sevdiyiniz musiqiləri asanlıqla tapa, diğər Music Player'lərdə olmayan özəllikləri işlədə bilərsiniz.
                 </p>
-                <a href="https://drive.usercontent.google.com/download?id=19ASLQlGyepf6ZzhQxX63Q1sEaZwh5gQ2&export=download&authuser=0" class="download-button" target="_blank">İndi Yüklə</a>
+                <a id="downloadLink" href="#!" class="download-button">İndi Yüklə</a>
             </div>
         </div>
     </header>
@@ -216,5 +216,12 @@
             <p>© 2024-2025 Cicek Sulutepe INC. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById("downloadLink").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default behavior of the link
+            window.open("https://drive.usercontent.google.com/download?id=19ASLQlGyepf6ZzhQxX63Q1sEaZwh5gQ2&export=download&authuser=0", "_blank"); // Open in a new tab using JavaScript
+        });
+    </script>
 </body>
 </html>
