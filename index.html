@@ -84,7 +84,7 @@
             color: var(--text-secondary);
         }
 
-        .download-button {
+       .download-button {
             background-color: var(--accent);
             color: var(--text-primary);
             padding: 1rem 2.5rem;
@@ -157,6 +157,10 @@
         .news-item:nth-child(3) {
             animation-delay: 0.6s;
         }
+        .news-item:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
 
         .news-item:last-child {
             margin-bottom: 0;
@@ -313,7 +317,7 @@
                 <img src="CicekPlayer.ico" alt="CicekPlayer Logo" class="header-logo">
                 <h1 class="header-title">CicekPlayer</h1>
                 <p class="header-description">
-                    CicekPlayer, musiqilərinizi yeni bir tərzdə dinləmək üçün mükəmməl bir tətbiqdir. Sadə və istifadəçi dostu interfeysi ilə sevdiyiniz musiqiləri asanlıqla tapa, diğər Music Player'lərdə olmayan özəllikləri işlədə bilərsiniz.
+                    CicekPlayer, musiqilərinizi yeni bir tərzdə dinləmək üçün mükəmməl bir tətbiqdir. İndi daha da təkmilləşdirilmiş funksiyaları, yeni interfeysi ilə sevdiyiniz musiqiləri asanlıqla tapın, diğər Music Player'lərdə olmayan özəllikləri işlədin.
                 </p>
                 <a id="downloadLink" href="#!" class="download-button">Yüklə/Güncəllə</a>
             </div>
@@ -324,6 +328,13 @@
         <div class="news-section">
             <h2 class="news-title">Xəbərlər</h2>
             <div class="news-content">
+               <div class="news-item">
+                    <h3 class="news-item-title">Yeni Versiya: v1.9.4!</h3>
+                    <p class="news-item-date">26.01.2025</p>
+                     <p class="news-item-description">
+                        CicekPlayer-in yeni versiyası olan v1.9.4 artıq istifadənizdədir! Bu versiya ilə yeni Playlist özəlliyi, Online Mahnı Qoşma, Online Radio, yenilənmiş Xəbərlər pəncərəsi, Arayüz dəyişiklikləri, performans təkmilləşdirmələri, bug düzəlişləri və təhlükəsizlik/sabitlik təkmilləşdirmələri gətirildi.
+                    </p>
+                </div>
                 <div class="news-item">
                     <h3 class="news-item-title">Yeni Versiya: v1.9.3!</h3>
                     <p class="news-item-date">24.01.2025</p>
@@ -346,7 +357,7 @@
     <script>
         document.getElementById("downloadLink").addEventListener("click", function(event) {
             event.preventDefault();
-            window.open("https://e.pcloud.link/publink/show?code=XZEhmKZcb72FwILtLJr0GxWWluAwVOWLEB7", "_blank");
+           window.open("https://disk.yandex.com.tr/d/m7CW2e4fymlBXQ", "_blank");
         });
 
         window.addEventListener('scroll', function() {
