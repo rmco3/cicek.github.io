@@ -1,1 +1,9 @@
-test123
+ v1.9.5
+
+ (Tarix: 27.01.2025)
+
+ - Yeni endirmə vəya sayt prablemlərinə qarşı CicekPlayer Downloader
+ - Güncəllənmiş Xəbərlər pəncərəsi
+ - Arayüz (UI) dəğişiklikləri 
+ - Performans tekmilleşdirmeleri ve bug düzelişleri
+ - Tehlükesizlik ve sabitliyin tekmilleşdirilmesi
