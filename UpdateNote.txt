@@ -1,9 +1,8 @@
- v1.9.5
+ v1.9.6
 
- (Tarix: 27.01.2025)
+ (Tarix: 30.01.2025)
 
- - Yeni endirmə vəya sayt prablemlərinə qarşı CicekPlayer Downloader
- - Güncəllənmiş Xəbərlər pəncərəsi
+ - Yeni GitHub ilə daxil olma
  - Arayüz (UI) dəğişiklikləri 
  - Performans tekmilleşdirmeleri ve bug düzelişleri
  - Tehlükesizlik ve sabitliyin tekmilleşdirilmesi
