@@ -1,8 +1,10 @@
- v1.9.6
+ v1.9.7
 
- (Tarix: 30.01.2025)
+ (Tarix: 1.02.2025)
 
- - Yeni GitHub ilə daxil olma
+ - Yeni Mahnı adını dəyişmə
+ - Yeni Güncellemeleri yoxlama butonu "CicekPlayer Haqqında penceresinde"
+ - Güncəllənmiş hesab sistemi
  - Arayüz (UI) dəğişiklikləri 
  - Performans tekmilleşdirmeleri ve bug düzelişleri
  - Tehlükesizlik ve sabitliyin tekmilleşdirilmesi
