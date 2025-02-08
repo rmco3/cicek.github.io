@@ -1,4 +1,4 @@
 {
   "version": "1.9.7",
-  "download_url": "https://www.dropbox.com/scl/fi/ofry9fnyjzh983n4p7g7i/CicekPlayer.zip?rlkey=mall4u8vaooo73hx2m0mulxp8&st=hxk0wpsu&dl=1"
+  "download_url": "https://www.dropbox.com/scl/fi/24ok5hr5sevfx12g6vbzb/CicekPlayer.zip?rlkey=qlwpdoljo3ap434eiqovcrbg4&st=s4auc76w&dl=1"
 }
