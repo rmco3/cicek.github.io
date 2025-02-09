@@ -1,10 +1,12 @@
- v1.9.7
+ v1.9.8
 
- (Tarix: 1.02.2025)
+ (Tarix: 8.02.2025)
 
- - Yeni Mahnı adını dəyişmə
- - Yeni Güncellemeleri yoxlama butonu "CicekPlayer Haqqında penceresinde"
- - Güncəllənmiş hesab sistemi
+ - Yeni Güncəlləmə sistemi
+ - Güncəllənmiş mahnı haqqında pəncərəsi
+ - Güncəllənmiş mahnı səsini bağlama (mute)
+ - Yeni musiqi qısa yolları (Space ilə mahnıyı dayandırın, Enter ile mahnıyı tezden başlatın .vs)
+ - Xəbərlər pəncərəsi qaldırıldı
  - Arayüz (UI) dəğişiklikləri 
  - Performans tekmilleşdirmeleri ve bug düzelişleri
  - Tehlükesizlik ve sabitliyin tekmilleşdirilmesi
