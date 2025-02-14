@@ -1,12 +1,10 @@
- v1.9.8
+ v1.9.9
 
- (Tarix: 8.02.2025)
+ (Tarix: 15.02.2025)
 
- - Yeni Güncəlləmə sistemi
- - Güncəllənmiş mahnı haqqında pəncərəsi
- - Güncəllənmiş mahnı səsini bağlama (mute)
- - Yeni musiqi qısa yolları (Space ilə mahnıyı dayandırın, Enter ile mahnıyı tezden başlatın .vs)
- - Xəbərlər pəncərəsi qaldırıldı
+ - Yeni mahnı qarıştırma
+ - Yeni keş (cashe) temizleme
+ - Yeni mahnı formatları (.aif;*.aiff;*.amr;*.au;*.cda;*.mid;*.midi;*.opus;*.ra* ve daha çoxu...)
+ - Kütüphaneler güncellendi
  - Arayüz (UI) dəğişiklikləri 
  - Performans tekmilleşdirmeleri ve bug düzelişleri
- - Tehlükesizlik ve sabitliyin tekmilleşdirilmesi
