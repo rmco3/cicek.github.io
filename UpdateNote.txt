@@ -1,10 +1,9 @@
- v1.9.9
+ v2.0.0
 
- (Tarix: 15.02.2025)
+ (Tarix: 16.02.2025)
 
- - Yeni mahnı qarıştırma
- - Yeni keş (cashe) temizleme
- - Yeni mahnı formatları (.aif;*.aiff;*.amr;*.au;*.cda;*.mid;*.midi;*.opus;*.ra* ve daha çoxu...)
- - Kütüphaneler güncellendi
+ - Güncəlləmələri yoxlama butonu panelə daxil oldu və güncəlləmə sistemi yenilendi
+ - Yeni Labs (Labs'da hələlik özəllik yoxdur)
+ - Yeni mahnı sözleri (Lyrics) özelliyi
  - Arayüz (UI) dəğişiklikləri 
- - Performans tekmilleşdirmeleri ve bug düzelişleri
+ - Bug düzelişleri
