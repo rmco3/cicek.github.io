@@ -1,9 +1,6 @@
- v2.0.0
+ v2.0.1
 
- (Tarix: 16.02.2025)
+ (Tarix: 17.02.2025)
 
- - Güncəlləmələri yoxlama butonu panelə daxil oldu və güncəlləmə sistemi yenilendi
- - Yeni Labs (Labs'da hələlik özəllik yoxdur)
- - Yeni mahnı sözleri (Lyrics) özelliyi
  - Arayüz (UI) dəğişiklikləri 
  - Bug düzelişleri
