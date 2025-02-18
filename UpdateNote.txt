@@ -1,8 +1,8 @@
- v2.0.2
+ v2.0.3
 
  (Tarix: 18.02.2025)
 
- - Yeni avtomatik güncəlləmə yükləmə özəlliyi
- - Keş temizleme güncellendi
+ - Yeni Avtomatik mahnı yükleme (program açıldığında qulaq astığınız en axrıncı mahnıyı avtomatik vaxtı ile birlikte yüklüyür)
+ - Yeni avtomatik güncəlləmə yükləmə özəlliyi qaldırıldı (xetalar üzünden)
  - Arayüz (UI) dəğişiklikləri 
  - Bug düzelişleri
