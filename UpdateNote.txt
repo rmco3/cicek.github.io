@@ -1,6 +1,8 @@
- v2.0.1
+ v2.0.2
 
- (Tarix: 17.02.2025)
+ (Tarix: 18.02.2025)
 
+ - Yeni avtomatik güncəlləmə yükləmə özəlliyi
+ - Keş temizleme güncellendi
  - Arayüz (UI) dəğişiklikləri 
  - Bug düzelişleri
