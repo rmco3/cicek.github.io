@@ -1,1 +1,8 @@
-test
+ v2.0.4
+
+ (Tarix: 20.02.2025)
+
+ - Yeni Avtomatik mahnı yükleme geliştirildi, düzeltildi
+ - Arxa planda avtomatik güncelleme yoxlanışı
+ - Arayüz (UI) dəğişiklikləri 
+ - Bug düzelişleri
