@@ -1,7 +1,7 @@
- v2.0.4
+   v2.0.4
 
- (Date: 20.02.2025)
+   (Date: 20.02.2025)
 
- - New Automatic music load improved, fixed
- - Automatic update check feature in the background
- - UI changes
+ - New Automatic music load improved, fixed some bugs
+ - Automatic update check feature in the background (if you check)
+ - UI fixes
