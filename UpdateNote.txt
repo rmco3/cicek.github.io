@@ -1,7 +1,29 @@
-   v2.0.4
+   v2.0.5 BETA
 
-   (Date: 20.02.2025)
+   (Date: 24.04.2025)
 
- - New Automatic music load improved, fixed some bugs
- - Automatic update check feature in the background (if you check)
- - UI fixes
+ - Improved Music name search
+ - Improved Playlist name search
+ - New Search music name with DuckDuckGo, Brave Search and Apple Music
+ - New Add tags to Music
+ - New Music Search Modes
+ - New Advanced Settings
+ - New Scan Music feature
+ - New Sleep Timer feature
+ - New CicekPlayer Converter
+ - New CicekPlayer Mini (if you check, opens mini mode when CicekPlayer close)
+ - New Change or add Music Image feature
+ - New Smart shuffle playback feature
+ - New Automatic Playlist creation
+ - New Music rate 
+ - New Customize
+ - New Ambient mode
+ - New Auto-pause/resume with other media's feature
+ - Revamped and Improved Music Info window
+ - Libraries updated (better infrastructure)
+ - Other changes (too long to write here) 
+ - Updated adding music (no limits, and other bullshits)
+ - Major UI changes, fixes (really)
+ - Performance improvements and multiple bug fixes
+
+Please don't forget, this update is BETA, there may be some bugs
