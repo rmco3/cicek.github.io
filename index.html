@@ -63,7 +63,7 @@
         .header-logo {
             width: 72px;
             height: 72px;
-            /* Removed continuous spin for a more modern, subtle feel */
+            animation: logoSpin 5s linear infinite; /* Re-added logo spin animation */
         }
 
         .header-title {
@@ -145,7 +145,6 @@
             animation: itemAnimation 0.8s ease-out forwards;
             opacity: 0;
             transform: translateY(30px);
-            /* Removed nth-child delays as there's only one item now */
         }
 
         .news-item:last-child {
@@ -242,7 +241,15 @@
             }
         }
 
-        /* Removed logoSpin animation */
+        @keyframes logoSpin { /* Re-added logoSpin animation */
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
 
         @keyframes titleGlow {
             from {
