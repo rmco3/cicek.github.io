@@ -1,9 +1,11 @@
-   v2.0.5 BETA
+   v2.0.5
 
-   (Date: 24.04.2025)
+   (Date: 11.07.2025)
 
  - Improved Music name search
  - Improved Playlist name search
+ - New. Show previous searches in search box
+ - New Context Menu
  - New Search music name with DuckDuckGo, Brave Search and Apple Music
  - New Add tags to Music
  - New Music Search Modes
@@ -25,5 +27,3 @@
  - Updated adding music (no limits, and other bullshits)
  - Major UI changes, fixes (really)
  - Performance improvements and multiple bug fixes
-
-Please don't forget, this update is BETA, there may be some bugs
