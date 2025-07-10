@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Official update page for CicekPlayer application">
-    <title>Cicek - News</title>
+    <meta name="description" content="Official update page for CicekPlayer application - Your ultimate music companion for a richer listening experience.">
+    <title>CicekPlayer - News & Updates</title>
     <link rel="icon" href="CicekPlayer.ico" type="image/x-icon">
     <style>
         :root {
@@ -12,7 +12,7 @@
             --text-primary: #ffffff;
             --accent: #4CAF50;
             --accent-light: #8BC34A;
-            --border: rgba(255, 255, 255, 0.1);
+            --border: rgba(255, 255, 255, 0.15); /* Slightly more visible border */
             --card-bg: #1E1E1E;
             --button-hover: #388E3C;
             --button-hover-light: #689F38;
@@ -63,7 +63,7 @@
         .header-logo {
             width: 72px;
             height: 72px;
-            animation: logoSpin 5s linear infinite;
+            /* Removed continuous spin for a more modern, subtle feel */
         }
 
         .header-title {
@@ -93,14 +93,15 @@
             font-size: 1.2rem;
             font-weight: 600;
             cursor: pointer;
-            transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+            transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
             text-decoration: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Softer shadow */
         }
 
         .download-button:hover {
             background-color: var(--button-hover);
             transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
 
         main {
@@ -131,7 +132,7 @@
             background: var(--card-bg);
             padding: 2.5rem;
             border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Softer, more diffused shadow */
             width: 100%;
             max-width: 800px;
         }
@@ -144,23 +145,8 @@
             animation: itemAnimation 0.8s ease-out forwards;
             opacity: 0;
             transform: translateY(30px);
+            /* Removed nth-child delays as there's only one item now */
         }
-
-        .news-item:nth-child(1) { animation-delay: 0.2s; }
-        .news-item:nth-child(2) { animation-delay: 0.4s; }
-        .news-item:nth-child(3) { animation-delay: 0.6s; }
-        .news-item:nth-child(4) { animation-delay: 0.8s; }
-        .news-item:nth-child(5) { animation-delay: 1.0s; }
-        .news-item:nth-child(6) { animation-delay: 1.2s; }
-        .news-item:nth-child(7) { animation-delay: 1.4s;}
-        .news-item:nth-child(8) { animation-delay: 1.6s;}
-        .news-item:nth-child(9) { animation-delay: 1.8s;}
-        .news-item:nth-child(10) { animation-delay: 2.0s;}
-        .news-item:nth-child(11) { animation-delay: 2.2s;}
-        .news-item:nth-child(12) { animation-delay: 2.4s;}
-        .news-item:nth-child(13) { animation-delay: 2.6s;}
-        .news-item:nth-child(14) { animation-delay: 2.8s;}
-
 
         .news-item:last-child {
             margin-bottom: 0;
@@ -209,13 +195,14 @@
             cursor: pointer;
             opacity: 0;
             visibility: hidden;
-            transition: opacity var(--transition-speed) ease, visibility var(--transition-speed) ease, transform var(--transition-speed) ease;
+            transition: opacity var(--transition-speed) ease, visibility var(--transition-speed) ease, transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
             z-index: 100;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Consistent shadow style */
         }
 
         .back-to-top:hover {
             background-color: var(--button-hover);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
         }
 
         .back-to-top.show {
@@ -255,15 +242,7 @@
             }
         }
 
-        @keyframes logoSpin {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
+        /* Removed logoSpin animation */
 
         @keyframes titleGlow {
             from {
@@ -317,7 +296,7 @@
                 <img src="CicekPlayer.ico" alt="CicekPlayer Logo" class="header-logo">
                 <h1 class="header-title">CicekPlayer</h1>
                  <p class="header-description">
-                   Unleash the full potential of your music library with CicekPlayer - a feature-rich and intuitive music player designed for audiophiles and casual listeners alike.  Enjoy high-quality playback, smart playlists, customizable interface, and much more.  Experience your music like never before with CicekPlayer!  (Current Version: 2.0.5 BETA)
+                   CicekPlayer is your ultimate music companion, crafted to elevate your listening experience. Dive into your audio library with a sleek, intuitive interface, powered by advanced features like smart playlists, comprehensive search, and customizable settings. Discover new ways to enjoy your favorite tracks with innovative tools like the Ambient Mode, CicekPlayer Mini, and intelligent shuffle. Seamlessly manage, convert, and organize your music, all while enjoying high-fidelity playback. CicekPlayer isn't just a player; it's a complete music ecosystem designed for true audiophiles and everyday listeners alike.
                 </p>
                 <a id="downloadLink" href="#!" class="download-button">Download/Update</a>
             </div>
@@ -326,102 +305,13 @@
 
     <main class="container">
         <div class="news-section">
-            <h2 class="news-title">News</h2>
+            <h2 class="news-title">Latest News</h2>
             <div class="news-content">
                 <div class="news-item">
-                    <h3 class="news-item-title">New Version: v2.0.5 BETA!</h3>
-                    <p class="news-item-date">26.04.2025</p>
+                    <h3 class="news-item-title">New Version: v2.0.5!</h3>
+                    <p class="news-item-date">11.07.2025</p>
                     <p class="news-item-description">
-                       CicekPlayer v2.0.5 is here! This is a BETA release that introduces a multitude of exciting new features, improvements, and fixes.  Enhancements include improved search functionality for music and playlists, integration of new search engines, tagging capabilities, advanced settings, a sleep timer, music conversion tools, mini mode, image customization, smart shuffle, automatic playlist creation, music rating and customization options, an ambient mode, auto-pause/resume with other media, and a revamped music info window. The underlying libraries have been updated, and there are major UI changes, performance improvements, and bug fixes.
-                    </p>
-                </div>
-                <div class="news-item">
-                    <h3 class="news-item-title">New Version: v2.0.4!</h3>
-                    <p class="news-item-date">20.02.2025</p>
-                    <p class="news-item-description">
-                        CicekPlayer v2.0.4 is here!  This update improves and fixes the automatic song loading function. In addition, the application will automatically check for new updates while running in the background. UI changes and bug fixes are also included in this version.
-                    </p>
-                </div>
-
-                <div class="news-item">
-                    <h3 class="news-item-title">New Version: v2.0.3!</h3>
-                    <p class="news-item-date">18.02.2025</p>
-                    <p class="news-item-description">
-                        CicekPlayer v2.0.3 is now available! This update adds a new feature that automatically loads the last song you listened to, along with its timestamp, when the program starts. The automatic update loading feature from the previous version has been temporarily removed due to some bugs. In addition, UI improvements and bug fixes are also included in this version.
-                    </p>
-                </div>
-
-                <div class="news-item">
-                    <h3 class="news-item-title">New Version: v2.0.2!</h3>
-                    <p class="news-item-date">18.02.2025</p>
-                    <p class="news-item-description">
-                        The new version of CicekPlayer, v2.0.2, is now available! This version introduces a new automatic update loading feature, updated cache cleaning, UI changes, and bug fixes.
-                    </p>
-                </div>
-
-                <div class="news-item">
-                    <h3 class="news-item-title">New Version: v2.0.1!</h3>
-                    <p class="news-item-date">17.02.2025</p>
-                    <p class="news-item-description">
-                        The new version of CicekPlayer, v2.0.1, is now available! This version brings UI changes and bug fixes.
-                    </p>
-                </div>
-                <div class="news-item">
-                    <h3 class="news-item-title">New Version: v2.0.0!</h3>
-                    <p class="news-item-date">16.02.2025</p>
-                    <p class="news-item-description">
-                        The new version of CicekPlayer, v2.0.0, is now available! With this version, the check for updates button is included in the panel, the update system has been updated, a new Labs (no features in Labs yet), a new lyrics feature, UI changes, and bug fixes have been introduced.
-                    </p>
-                </div>
-                <div class="news-item">
-                    <h3 class="news-item-title">New Version: v1.9.9!</h3>
-                    <p class="news-item-date">15.02.2025</p>
-                    <p class="news-item-description">
-                        The new version of CicekPlayer, v1.9.9, is now available! With this version, new music shuffle, new cache cleaning, new music format support (.aif;*.aiff;*.amr;*.au;*.cda;*.mid;*.midi;*.opus;*.ra* and more...), libraries updated, UI changes, performance improvements, and bug fixes have been introduced.
-                    </p>
-                </div>
-
-                <div class="news-item">
-                    <h3 class="news-item-title">New Version: v1.9.8!</h3>
-                    <p class="news-item-date">8.02.2025</p>
-                    <p class="news-item-description">
-                        The new version of CicekPlayer, v1.9.8, is now available! This version introduces a new update system, an updated song information window, an updated song mute function, new music shortcuts (Pause song with Space, Restart song with Enter, etc.), UI changes, performance improvements, bug fixes, and security/stability improvements. The News window has been removed.
-                    </p>
-                </div>
-
-                <div class="news-item">
-                    <h3 class="news-item-title">New Version: v1.9.7!</h3>
-                    <p class="news-item-date">1.02.2025</p>
-                    <p class="news-item-description">
-                        The new version of CicekPlayer, v1.9.7, is now available! This version introduces a new Rename Song feature, a "Check for Updates" button in the "About CicekPlayer" window, an updated account system, UI changes, performance improvements, bug fixes, and security/stability improvements.
-                    </p>
-                </div>
-                <div class="news-item">
-                    <h3 class="news-item-title">New Version: v1.9.6!</h3>
-                    <p class="news-item-date">30.01.2025</p>
-                     <p class="news-item-description">
-                        The new version of CicekPlayer, v1.9.6, is now available! This version introduces new Login with GitHub, UI changes, performance improvements, bug fixes, and security/stability improvements.
-                    </p>
-                </div>
-                <div class="news-item">
-                    <h3 class="news-item-title">New Version: v1.9.5!</h3>
-                    <p class="news-item-date">27.01.2025</p>
-                     <p class="news-item-description">
-                        The new version of CicekPlayer, v1.9.5, is now available! This version introduces a new CicekPlayer Downloader to counter downloading or site problems, an updated News window, UI changes, performance improvements, bug fixes, and security/stability improvements.
-                    </p>
-                </div>
-               <div class="news-item">
-                    <h3 class="news-item-title">New Version: v1.9.4!</h3>
-                    <p class="news-item-date">26.01.2025</p>
-                     <p class="news-item-description">
-                        The new version of CicekPlayer, v1.9.4, is now available! This version introduces a new Playlist feature, Online Music Joining, Online Radio, an updated News window, UI changes, performance improvements, bug fixes, and security/stability improvements.
-                    </p>
-                </div>
-                <div class="news-item">
-                    <h3 class="news-item-title">New Version: v1.9.3!</h3>
-                    <p class="news-item-date">24.01.2025</p>
-                    <p class="news-item-description">
-                        The latest version of CicekPlayer is now available! Enjoy your music experience even more with new features, improvements, and interface changes.
+                       CicekPlayer v2.0.5 is here! This significant update brings a host of new features and improvements. Enjoy enhanced music and playlist search functionality, now with the ability to view previous searches and utilize new search engines like DuckDuckGo, Brave Search, and Apple Music. Organize your music better with new tagging capabilities and multiple music search modes. Dive into advanced settings, set a sleep timer, and convert your music with the new CicekPlayer Converter. Personalize your experience with CicekPlayer Mini mode, custom music images, smart shuffle, automatic playlist creation, music rating, and extensive customization options. Immerse yourself with the new Ambient Mode and seamless auto-pause/resume with other media. The Music Info window has been completely revamped and improved. Under-the-hood, libraries have been updated for a better infrastructure, music adding has no limits, and you'll find major UI changes and fixes, along with significant performance improvements and multiple bug fixes.
                     </p>
                 </div>
             </div>
@@ -434,12 +324,12 @@
         </div>
     </footer>
 
-    <button class="back-to-top" title="">↑</button>
+    <button class="back-to-top" title="Back to Top">↑</button>
 
     <script>
         document.getElementById("downloadLink").addEventListener("click", function(event) {
             event.preventDefault();
-           window.open("https://www.dropbox.com/scl/fi/9xjg597uooli6ybb1b963/CicekPlayer.zip?rlkey=lzgygbl9g2f3zx0qqptdhlnpg&st=yq30psjv&dl=1", "_blank");
+           window.open("https://www.dropbox.com/scl/fi/jchufn71xqs2sjw72leqc/CicekPlayer-Updater.zip?rlkey=xilen1q0h3668tdw2g1ib44y7&st=wakt5o4a&dl=0", "_blank");
         });
 
         window.addEventListener('scroll', function() {
