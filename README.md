@@ -1,2 +1,2 @@
-# Cicek Site
-Cicek Site. **PLEASE DO NOT ANYONE TOUCH THIS PROJECT, DO ANYTHING TO IT, OR CHANGE THE FILES IN IT. THIS PROJECT CONTAINS THE SITE OF THE APPLICATION NAMED “CicekPlayer”**: THANKS ❤️
+# cicekplayer's site and update channel.
+CicekPlayer's website and update channel. It's a beautiful, modern site, and the basis of CicekPlayer's update logic. Feel free to tamper with it, but please do not abuse it. Love from the dev 💖
