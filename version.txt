@@ -1,4 +1,4 @@
 {
-  "version": "2.0.5",
-  "download_url": "https://www.dropbox.com/scl/fi/jchufn71xqs2sjw72leqc/CicekPlayer-Updater.zip?rlkey=xilen1q0h3668tdw2g1ib44y7&st=wakt5o4a&dl=1"
+  "version": "2.0.6",
+  "download_url": "https://www.dropbox.com/scl/fi/z487w5ukq42ja8gir0169/CicekPlayer-Updater.zip?rlkey=htj0xpjl1c7n7ifscemya2524&st=9wdiaa98&dl=1"
 }
