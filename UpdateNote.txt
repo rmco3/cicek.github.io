@@ -1,29 +1,7 @@
-   v2.0.5
+   v2.0.6
 
-   (Date: 11.07.2025)
+   (Date: 18.07.2025)
 
- - Improved Music name search
- - Improved Playlist name search
- - New. Show previous searches in search box
- - New Context Menu
- - New Search music name with DuckDuckGo, Brave Search and Apple Music
- - New Add tags to Music
- - New Music Search Modes
- - New Advanced Settings
- - New Scan Music feature
- - New Sleep Timer feature
- - New CicekPlayer Converter
- - New CicekPlayer Mini (if you check, opens mini mode when CicekPlayer close)
- - New Change or add Music Image feature
- - New Smart shuffle playback feature
- - New Automatic Playlist creation
- - New Music rate 
- - New Customize
- - New Ambient mode
- - New Auto-pause/resume with other media's feature
- - Revamped and Improved Music Info window
- - Libraries updated (better infrastructure)
- - Other changes (too long to write here) 
- - Updated adding music (no limits, and other bullshits)
- - Major UI changes, fixes (really)
- - Performance improvements and multiple bug fixes
+ - Search has been further improved
+ - New automatic music deletion suggestions feature (you need to enable it for it to work)
+ - A few bug fixes and general improvements
