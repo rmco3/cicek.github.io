@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Official update page for CicekPlayer application - Your ultimate music companion for a richer listening experience.">
+    <meta name="description" content="CicekPlayer is a modern music player designed for an unparalleled audio experience, featuring smart organization, advanced playback, and unique personalization options like Ambient Mode.">
     <title>CicekPlayer - News & Updates</title>
     <link rel="icon" href="CicekPlayer.ico" type="image/x-icon">
     <style>
@@ -303,7 +303,7 @@
                 <img src="CicekPlayer.ico" alt="CicekPlayer Logo" class="header-logo">
                 <h1 class="header-title">CicekPlayer</h1>
                  <p class="header-description">
-                   CicekPlayer is an innovative music player designed to enhance your audio journey. It offers a sleek and intuitive interface for managing your music library, creating smart playlists, and enjoying high-fidelity playback. With advanced search capabilities, customizable settings, and unique features like Ambient Mode and intelligent shuffle, CicekPlayer provides a comprehensive and personalized listening experience for every music enthusiast.
+                    CicekPlayer is an innovative and powerful music player engineered to elevate your listening experience. It provides a sleek interface for effortlessly managing your music library, crafting intelligent playlists, and enjoying high-fidelity audio. With enhanced search, unique features like Ambient Mode, intelligent shuffle, and comprehensive music statistics, CicekPlayer offers a truly personalized and enriched auditory journey for every music enthusiast.
                 </p>
                 <a id="downloadLink" href="https://www.dropbox.com/scl/fi/sd2aw04gv8df45hg5f740/CicekPlayer-Installer.exe?rlkey=mvt5qy5hexpu0zvpkzto2m3en&st=r24nhjai&dl=1" class="download-button">Download/Update</a>
             </div>
@@ -315,10 +315,10 @@
             <h2 class="news-title">Latest News</h2>
             <div class="news-content">
                 <div class="news-item">
-                    <h3 class="news-item-title">New Version: v2.0.6!</h3>
-                    <p class="news-item-date">18.07.2025</p>
+                    <h3 class="news-item-title">New Version: v2.0.7 - Feature-Packed Update!</h3>
+                    <p class="news-item-date">26.07.2025</p>
                     <p class="news-item-description">
-                       CicekPlayer v2.0.6 is now available! This update brings several key enhancements to further refine your music experience. Search functionality has been significantly improved for faster and more accurate results. We've introduced a new automatic music deletion suggestions feature, helping you manage your library more efficiently (this feature requires manual activation in settings). Additionally, this version includes a few bug fixes and general performance improvements for a smoother, more reliable application.
+                       We are thrilled to announce the release of CicekPlayer v2.0.7, packed with exciting new features and significant improvements! Enjoy an even more refined and faster search experience. Discover our new <strong>automatic music deletion suggestions</strong> (an optional feature) to keep your library tidy. Music playback now intelligently <strong>auto-pauses/resumes</strong> when you press Win+L or your PC goes to sleep (also optional). For those who love consistency, your <strong>last search will now automatically load</strong> when the application opens – perfect for resuming your "cute cat searchs"! We've also added convenient <strong>settings export/import</strong> functionality and a brand new <strong>Music Statistics window</strong>, where you can view your most listened music, albums, and artists, and even download your data. As always, this update includes various bug fixes, library updates, and general performance enhancements for an even smoother experience.
                     </p>
                 </div>
             </div>
@@ -342,6 +342,7 @@
         window.addEventListener('scroll', function() {
           var backToTopButton = document.querySelector('.back-to-top');
           // Only show the button if the scroll position is between 200px and the footer
+          // (checking if enough scroll space above and not too close to the footer)
           if (window.pageYOffset > 200 && window.pageYOffset + window.innerHeight < document.body.scrollHeight - document.querySelector('footer').offsetHeight )
           {
             backToTopButton.classList.add('show');
