@@ -1,7 +1,11 @@
-   v2.0.6
+   v2.0.7
 
-   (Date: 18.07.2025)
+   (Date: 26.07.2025)
 
  - Search has been further improved
- - New automatic music deletion suggestions feature (you need to enable it for it to work)
- - A few bug fixes and general improvements
+ - New automatic music deletion suggestions feature (optional feature)
+ - New auto-pause/resume feature when pressing Win+L or when PC goes to sleep (optional feature)
+ - New automatic loading of your last search when the app is opened (important for cute cat searchs)
+ - New settings export/import feature
+ - New Music Statistics window (your most listened music, albums, artists are here and you can download the data)
+ - A few bug fixes/Libraries update/General improvements
