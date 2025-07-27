@@ -8,16 +8,19 @@
     <link rel="icon" href="CicekPlayer.ico" type="image/x-icon">
     <style>
         :root {
-            --bg-primary: #121212;
-            --text-primary: #ffffff;
-            --accent: #4CAF50;
-            --accent-light: #8BC34A;
-            --border: rgba(255, 255, 255, 0.15); /* Slightly more visible border */
-            --card-bg: #1E1E1E;
-            --button-hover: #388E3C;
-            --button-hover-light: #689F38;
-            --text-secondary: #aaaaaa;
-            --transition-speed: 0.3s;
+            --bg-primary: #0f0f10;
+            --text-primary: #f0f0f0;
+            --accent: #2bd67b;
+            --accent-hover: #1fc26c;
+            --border: rgba(255, 255, 255, 0.1);
+            --card-bg: #1a1a1d;
+            --text-secondary: #a0a0a5;
+            --transition-speed: 0.4s;
+            --animation-duration-main: 1s;
+            --animation-easing-main: cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.2);
         }
 
         * {
@@ -29,7 +32,7 @@
         body {
             background-color: var(--bg-primary);
             color: var(--text-primary);
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
             min-height: 100vh;
             display: flex;
@@ -50,7 +53,7 @@
             background: linear-gradient(135deg, var(--card-bg), var(--bg-primary));
             margin-bottom: 2rem;
             text-align: center;
-            animation: headerFadeIn var(--transition-speed) ease forwards;
+            animation: headerFadeIn var(--animation-duration-main) var(--animation-easing-main) forwards;
         }
 
         .header-content {
@@ -63,45 +66,68 @@
         .header-logo {
             width: 72px;
             height: 72px;
-            animation: logoSpin 5s linear infinite; /* Re-added logo spin animation */
+            animation: logoSpin 12s linear infinite;
+            filter: drop-shadow(0 0 8px rgba(43, 214, 123, 0.3));
+            will-change: transform;
         }
 
         .header-title {
             font-size: 2.8rem;
-            background: linear-gradient(45deg, var(--accent), var(--accent-light));
+            background: linear-gradient(90deg, var(--accent), #a1ffe1);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             margin-bottom: 1rem;
             letter-spacing: -0.5px;
-            animation: titleGlow 3s ease-in-out infinite alternate;
+            animation: titleGlow 4s ease-in-out infinite alternate;
         }
 
         .header-description {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             line-height: 1.8;
             max-width: 600px;
             color: var(--text-secondary);
         }
 
-       .download-button {
-            background-color: var(--accent);
-            color: var(--text-primary);
+        .download-button {
+            background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+            color: #0f0f10;
             padding: 1rem 2.5rem;
             border: none;
             border-radius: 30px;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+            transition: all var(--transition-speed) ease;
             text-decoration: none;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Softer shadow */
+            box-shadow: var(--shadow-md);
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
         }
 
-        .download-button:hover {
-            background-color: var(--button-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        .download-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .download-button:hover::before {
+            left: 100%;
+        }
+
+        .download-button:hover, .download-button:focus {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .download-button:active {
+            transform: translateY(-1px);
         }
 
         main {
@@ -116,7 +142,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            animation: newsSectionAnimation 1s ease-out forwards;
+            width: 100%;
+            animation: newsSectionAnimation var(--animation-duration-main) var(--animation-easing-main) forwards;
             margin-bottom: 3rem;
         }
 
@@ -126,25 +153,48 @@
             font-weight: 600;
             margin-bottom: 2rem;
             text-align: center;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .news-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 3px;
         }
 
         .news-content {
             background: var(--card-bg);
             padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Softer, more diffused shadow */
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
             width: 100%;
             max-width: 800px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .news-item {
-            padding: 1.2rem;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            animation: itemAnimation 0.8s ease-out forwards;
+            padding: 1.8rem;
+            background: rgba(30, 30, 34, 0.6);
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            animation: itemAnimation 0.8s var(--animation-easing-main) forwards;
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(20px);
+            transition: all var(--transition-speed) ease;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .news-item:hover {
+            background: rgba(40, 40, 45, 0.7);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
         }
 
         .news-item:last-child {
@@ -152,62 +202,75 @@
         }
 
         .news-item-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--accent-light);
-            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.6rem;
+            line-height: 1.3;
         }
 
         .news-item-date {
             font-size: 0.9rem;
             color: var(--text-secondary);
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
         }
 
         .news-item-description {
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: var(--text-primary);
             line-height: 1.7;
         }
 
+        .news-item-description strong {
+            color: #d0ffd9;
+        }
+
         footer {
-            padding: 2rem 0;
+            padding: 2.5rem 0;
             border-top: 1px solid var(--border);
             color: var(--text-secondary);
             text-align: center;
-            animation: footerFadeIn var(--transition-speed) ease forwards;
-            animation-delay: 0.4s;
+            animation: footerFadeIn var(--animation-duration-main) var(--animation-easing-main) forwards;
+            animation-delay: 0.5s;
+            opacity: 0;
+            font-size: 0.95rem;
         }
 
         .back-to-top {
             position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--accent);
-            color: var(--text-primary);
+            bottom: 25px;
+            right: 25px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+            color: #0f0f10;
             border: none;
             border-radius: 50%;
-            width: 48px;
-            height: 48px;
-            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
             cursor: pointer;
             opacity: 0;
             visibility: hidden;
-            transition: opacity var(--transition-speed) ease, visibility var(--transition-speed) ease, transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+            transition: all var(--transition-speed) ease;
             z-index: 100;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Consistent shadow style */
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .back-to-top:hover {
-            background-color: var(--button-hover);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        .back-to-top:hover, .back-to-top:focus {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .back-to-top:active {
+            transform: translateY(0);
         }
 
         .back-to-top.show {
             opacity: 1;
             visibility: visible;
-            transform: translateX(-50%) translateY(0);
         }
 
         @media (max-width: 768px) {
@@ -216,15 +279,23 @@
             }
 
             .header-title {
-                font-size: 2.2rem;
+                font-size: 2.3rem;
             }
 
             .header-description {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
 
             .news-content {
-                padding: 1.5rem;
+                padding: 1.8rem;
+            }
+
+            .news-item {
+                padding: 1.4rem;
+            }
+
+            .news-item-title {
+                font-size: 1.2rem;
             }
         }
 
@@ -232,20 +303,18 @@
         @keyframes headerFadeIn {
             from {
                 opacity: 0;
-                transform: translateY(-20px);
+                transform: translateY(-30px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        @keyframes logoSpin { /* Re-added logoSpin animation */
+        @keyframes logoSpin {
             from {
                 transform: rotate(0deg);
             }
-
             to {
                 transform: rotate(360deg);
             }
@@ -253,33 +322,33 @@
 
         @keyframes titleGlow {
             from {
-                text-shadow: 0 0 5px var(--accent);
+                text-shadow: 0 0 8px rgba(43, 214, 123, 0.4);
             }
-
             to {
-                text-shadow: 0 0 15px var(--accent-light);
+                text-shadow: 0 0 20px rgba(43, 214, 123, 0.7), 0 0 30px rgba(43, 214, 123, 0.5);
             }
         }
 
         @keyframes newsSectionAnimation {
             from {
                 opacity: 0;
-                transform: scale(0.95);
+                transform: translateY(30px);
             }
-
             to {
                 opacity: 1;
-                transform: scale(1);
+                transform: translateY(0);
             }
         }
 
         @keyframes itemAnimation {
-            from {
+            0% {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(20px);
             }
-
-            to {
+            70% {
+                opacity: 1;
+            }
+            100% {
                 opacity: 1;
                 transform: translateY(0);
             }
@@ -288,21 +357,22 @@
         @keyframes footerFadeIn {
             from {
                 opacity: 0;
+                transform: translateY(20px);
             }
-
             to {
                 opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
 </head>
 <body>
-    <header class="animate-fade-in">
+    <header>
         <div class="container">
             <div class="header-content">
                 <img src="CicekPlayer.ico" alt="CicekPlayer Logo" class="header-logo">
                 <h1 class="header-title">CicekPlayer</h1>
-                 <p class="header-description">
+                <p class="header-description">
                     CicekPlayer is an innovative and powerful music player engineered to elevate your listening experience. It provides a sleek interface for effortlessly managing your music library, crafting intelligent playlists, and enjoying high-fidelity audio. With enhanced search, unique features like Ambient Mode, intelligent shuffle, and comprehensive music statistics, CicekPlayer offers a truly personalized and enriched auditory journey for every music enthusiast.
                 </p>
                 <a id="downloadLink" href="https://www.dropbox.com/scl/fi/sd2aw04gv8df45hg5f740/CicekPlayer-Installer.exe?rlkey=mvt5qy5hexpu0zvpkzto2m3en&st=r24nhjai&dl=1" class="download-button">Download/Update</a>
@@ -316,9 +386,9 @@
             <div class="news-content">
                 <div class="news-item">
                     <h3 class="news-item-title">New Version: v2.0.7 - Feature-Packed Update!</h3>
-                    <p class="news-item-date">26.07.2025</p>
+                    <p class="news-item-date">July 26, 2025</p>
                     <p class="news-item-description">
-                       We are thrilled to announce the release of CicekPlayer v2.0.7, packed with exciting new features and significant improvements! Enjoy an even more refined and faster search experience. Discover our new <strong>automatic music deletion suggestions</strong> (an optional feature) to keep your library tidy. Music playback now intelligently <strong>auto-pauses/resumes</strong> when you press Win+L or your PC goes to sleep (also optional). For those who love consistency, your <strong>last search will now automatically load</strong> when the application opens – perfect for resuming your "cute cat searchs"! We've also added convenient <strong>settings export/import</strong> functionality and a brand new <strong>Music Statistics window</strong>, where you can view your most listened music, albums, and artists, and even download your data. As always, this update includes various bug fixes, library updates, and general performance enhancements for an even smoother experience.
+                        We are thrilled to announce the release of CicekPlayer v2.0.7, packed with exciting new features and significant improvements! Enjoy an even more refined and faster search experience. Discover our new <strong>automatic music deletion suggestions</strong> (an optional feature) to keep your library tidy. Music playback now intelligently <strong>auto-pauses/resumes</strong> when you press Win+L or your PC goes to sleep (also optional). For those who love consistency, your <strong>last search will now automatically load</strong> when the application opens – perfect for resuming your "cute cat searchs"! We've also added convenient <strong>settings export/import</strong> functionality and a brand new <strong>Music Statistics window</strong>, where you can view your most listened music, albums, and artists, and even download your data. As always, this update includes various bug fixes, library updates, and general performance enhancements for an even smoother experience.
                     </p>
                 </div>
             </div>
@@ -327,7 +397,7 @@
 
     <footer>
         <div class="container">
-            <p>© 2025 Cicek Sulutepe INC</p>
+            <p>© 2025 Cicek Sulutepe INC. All rights reserved.</p>
         </div>
     </footer>
 
@@ -336,28 +406,41 @@
     <script>
         document.getElementById("downloadLink").addEventListener("click", function(event) {
             event.preventDefault();
-           window.open("https://www.dropbox.com/scl/fi/sd2aw04gv8df45hg5f740/CicekPlayer-Installer.exe?rlkey=mvt5qy5hexpu0zvpkzto2m3en&st=r24nhjai&dl=1", "_blank");
+            window.open("https://www.dropbox.com/scl/fi/sd2aw04gv8df45hg5f740/CicekPlayer-Installer.exe?rlkey=mvt5qy5hexpu0zvpkzto2m3en&st=r24nhjai&dl=1", "_blank");
         });
+
+        // Optimized scroll listener
+        let ticking = false;
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        function updateBackToTopVisibility() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+            ticking = false;
+        }
 
         window.addEventListener('scroll', function() {
-          var backToTopButton = document.querySelector('.back-to-top');
-          // Only show the button if the scroll position is between 200px and the footer
-          // (checking if enough scroll space above and not too close to the footer)
-          if (window.pageYOffset > 200 && window.pageYOffset + window.innerHeight < document.body.scrollHeight - document.querySelector('footer').offsetHeight )
-          {
-            backToTopButton.classList.add('show');
-
-          } else {
-            backToTopButton.classList.remove('show');
-          }
-
+            if (!ticking) {
+                requestAnimationFrame(updateBackToTopVisibility);
+                ticking = true;
+            }
         });
-
 
         document.querySelector('.back-to-top').addEventListener('click', function() {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
+            });
+        });
+
+        // Staggered animation for news items
+        document.addEventListener('DOMContentLoaded', function () {
+            const newsItems = document.querySelectorAll('.news-item');
+            newsItems.forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.1}s`;
             });
         });
     </script>
