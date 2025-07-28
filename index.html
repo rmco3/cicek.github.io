@@ -226,6 +226,33 @@
             color: #d0ffd9;
         }
 
+        /* ----- Start of Added/Updated Styles ----- */
+        .archive-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            animation: newsSectionAnimation var(--animation-duration-main) var(--animation-easing-main) forwards;
+            animation-delay: 0.3s; /* Delay after news section animates in */
+            opacity: 0; /* Start hidden for animation */
+            margin-bottom: 3rem;
+        }
+
+        .centered-content {
+            text-align: center;
+        }
+
+        .archive-description {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* ----- End of Added/Updated Styles ----- */
+
         footer {
             padding: 2.5rem 0;
             border-top: 1px solid var(--border);
@@ -393,6 +420,19 @@
                 </div>
             </div>
         </div>
+
+        <!-- ----- Start of Added Section ----- -->
+        <div class="archive-section">
+            <h2 class="news-title">Archive Versions</h2>
+            <div class="news-content centered-content">
+                <p class="archive-description">
+                    Looking for older, preview, or experimental builds of CicekPlayer? Our official archive hosts a collection of previous versions. Please note that these are provided for testing or legacy purposes and may not be stable or supported.
+                </p>
+                <a href="https://archive.org/details/@rmco3" target="_blank" rel="noopener noreferrer" class="download-button">Browse Archives</a>
+            </div>
+        </div>
+        <!-- ----- End of Added Section ----- -->
+
     </main>
 
     <footer>
